@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Typing Behavior Monitor</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow bg-glow-left"></div>
+    <div class="bg-glow bg-glow-right"></div>
+
+    <main class="shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Intelligent Typing Behavior Monitoring</p>
+          <h1>Real-time behavioral authentication dashboard</h1>
+          <p class="subtitle">
+            Monitor typing sessions, anomaly scores, and live system health from the edge to the cloud.
+          </p>
+        </div>
+        <div class="status-pill" id="apiStatus">Connecting…</div>
+      </header>
+
+      <section class="grid cards">
+        <article class="card metric">
+          <span>Total Events</span>
+          <strong id="totalEvents">0</strong>
+        </article>
+        <article class="card metric">
+          <span>Normal Events</span>
+          <strong id="normalEvents">0</strong>
+        </article>
+        <article class="card metric">
+          <span>Anomaly Events</span>
+          <strong id="anomalyEvents">0</strong>
+        </article>
+        <article class="card metric">
+          <span>Sessions Tracked</span>
+          <strong id="sessionsTracked">0</strong>
+        </article>
+      </section>
+
+      <section class="grid two-col">
+        <article class="card panel">
+          <div class="panel-head">
+            <div>
+              <h2>System Overview</h2>
+              <p id="latestTimestamp">No events yet</p>
+            </div>
+          </div>
+          <div class="chart-wrap">
+            <div class="bar-group">
+              <label>Normal</label>
+              <div class="bar-track"><div class="bar normal" id="normalBar"></div></div>
+            </div>
+            <div class="bar-group">
+              <label>Anomaly</label>
+              <div class="bar-track"><div class="bar anomaly" id="anomalyBar"></div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card panel">
+          <div class="panel-head">
+            <div>
+              <h2>Quick Test</h2>
+              <p>Send sample payload to see the pipeline working.</p>
+            </div>
+            <button id="sendSample" class="btn">Run Sample</button>
+          </div>
+          <pre id="sampleOutput" class="output">Awaiting sample response…</pre>
+        </article>
+      </section>
+
+      <section class="card panel">
+        <div class="panel-head">
+          <div>
+            <h2>Recent Sessions</h2>
+            <p>Latest tracked sessions from the SQLite event store.</p>
+          </div>
+        </div>
+        <div id="sessionsList" class="session-list"></div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

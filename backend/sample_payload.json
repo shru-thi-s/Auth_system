@@ -1,0 +1,10 @@
+{
+  "device_id": "esp32-01",
+  "session_id": "demo-session-001",
+  "features": {
+    "mean_interval": 148.3,
+    "std_interval": 41.8,
+    "wpm": 43.9,
+    "pause_ratio": 0.13
+  }
+}

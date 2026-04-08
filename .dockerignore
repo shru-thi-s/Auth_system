@@ -1,0 +1,11 @@
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
+.git
+.gitignore
+backend/__pycache__
+backend/.pytest_cache
+backend/typing_monitor.db
